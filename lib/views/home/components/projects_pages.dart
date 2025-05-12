@@ -28,32 +28,29 @@ class _ProjectsPageState extends State<ProjectsPage> {
 
   final List<Project> allProjects = [
     Project(
-      title: "Sheqonomi",
-      description:
-          "Discover the difference when millennials and GENZ women curate content that will impact billions. Our world has certainly changed.",
-      imageUrl: "2.png",
-      liveLink: "https://play.google.com/store/apps/details?id=com.sheqonomi",
-      technologies: ["Flutter", "Firebase", "Playstore"],
+      title: "Plum: Financial Management",
+      description: "the Plum Web/App, a powerful platform designed to help the company manage financial health and gain business insights through data-driven decision-making.",
+      imageUrl: "assets/project/Plum.jpg",
+      technologies: ["Flutter", "Firebase", "Cloud Functions","GetX",],
       type: ProjectType.app,
     ),
     Project(
-      title: "Home|Home 4IM",
+      title: "SheShield: Women Safety App",
       description:
-          "Home is a social networking app designed to support and connect individuals starting their new life in a foreign country. Our mission is to create a welcoming community where users can share experiences, ask questions, and find helpful resources.",
-      imageUrl: "3.png",
-      liveLink:
-          "https://play.google.com/store/apps/details?id=com.home4im&hl=en_US",
-      technologies: ["Flutter", "Firebase", "Playstore"],
+          "SheShield is more than just an app – it's a step toward building a safer world to empower women with the tools they need to feel safe, informed, and supported – wherever they are",
+      imageUrl: "assets/project/SheShield.jpg",
+      // liveLink: "https://play.google.com/store/apps/details?id=com.home4im&hl=en_US",
+      technologies: ["Flutter", "Firebase", "Map","fl_chart"],
       type: ProjectType.app,
     ),
       Project(
-      title: "MonkeyType Clone",
+      title: "Chemisphere",
       description:
           "A typing speed tester inspired by Monkeytype, built using Flutter Web. It features a dark theme, real-time typing accuracy with color-coded feedback, customizable test modes (words, punctuation, quotes), and a detailed results summary. The app aims to help users improve their typing speed and accuracy in an engaging way.",
-      imageUrl: "12.webp",
-      liveLink: "https://monkeytypes.netlify.app/",
-      githubLink: "https://github.com/Ankit180898?tab=repositories",
-      technologies: ["Flutter", "Dart", "Netlify"],
+      imageUrl: "assets/project/Chemisphere.jpg",
+      liveLink: "https://play.google.com/store/apps/details?id=com.chemisphereApp.app",
+      // githubLink: "https://github.com/Ankit180898?tab=repositories",
+      technologies: ["Flutter", "Firebase", "MVC",],
       type: ProjectType.web,
     ),
     Project(
@@ -395,7 +392,7 @@ class _ProjectCardState extends State<ProjectCard> {
                               widget.project.imageUrl,
                               width: double.infinity,
                               height: double.infinity,
-                              fit: BoxFit.cover,
+                              fit: BoxFit.contain,
                             ),
                           ),
                         ),

@@ -77,9 +77,9 @@ class HomeScreen extends StatelessWidget {
 
   Widget buildResponsiveSalutation() {
     return Responsive(
-      desktop: buildSalutationText("Hi, I'm Ankit", 30),
-      tablet: buildSalutationText("Hi, I'm Ankit", 30),
-      mobile: buildSalutationText("Hi, I'm Ankit", 30),
+      desktop: buildSalutationText("Hi, I'm Yuvaraj", 30),
+      tablet: buildSalutationText("Hi, I'm Yuvaraj", 30),
+      mobile: buildSalutationText("Hi, I'm Yuvaraj", 30),
     );
   }
 
