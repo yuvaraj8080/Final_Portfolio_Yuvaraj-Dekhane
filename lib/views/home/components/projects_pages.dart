@@ -45,8 +45,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
     ),
       Project(
       title: "Chemisphere",
-      description:
-          "A typing speed tester inspired by Monkeytype, built using Flutter Web. It features a dark theme, real-time typing accuracy with color-coded feedback, customizable test modes (words, punctuation, quotes), and a detailed results summary. The app aims to help users improve their typing speed and accuracy in an engaging way.",
+      description: "Contributed to an educational platform aimed at enhancing the learning experience for students passionate about chemistry.",
       imageUrl: "assets/project/Chemisphere.jpg",
       liveLink: "https://play.google.com/store/apps/details?id=com.chemisphereApp.app",
       // githubLink: "https://github.com/Ankit180898?tab=repositories",
