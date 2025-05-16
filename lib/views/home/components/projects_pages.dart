@@ -30,10 +30,21 @@ class _ProjectsPageState extends State<ProjectsPage> {
     Project(
       title: "Plum: Financial Management",
       description: "the Plum Web/App, a powerful platform designed to help the company manage financial health and gain business insights through data-driven decision-making.",
-      imageUrl: "assets/project/Plum.jpg",
+      imageUrl: "assets/project/PlumApp.jpg",
       technologies: ["Flutter", "Firebase", "Cloud Functions","GetX",],
       type: ProjectType.app,
     ),
+
+    Project(
+      title: "Chemisphere App",
+      description: "Contributed to an educational platform aimed at enhancing the learning experience for students passionate about chemistry.",
+      imageUrl: "assets/project/ChemisphereApp.jpg",
+      liveLink: "https://play.google.com/store/apps/details?id=com.chemisphereApp.app",
+      // githubLink: "https://github.com/Ankit180898?tab=repositories",
+      technologies: ["Flutter", "Firebase", "MVC",],
+      type: ProjectType.web,
+    ),
+
     Project(
       title: "SheShield: Women Safety App",
       description:
@@ -43,25 +54,46 @@ class _ProjectsPageState extends State<ProjectsPage> {
       technologies: ["Flutter", "Firebase", "Map","fl_chart"],
       type: ProjectType.app,
     ),
-      Project(
-      title: "Chemisphere",
-      description: "Contributed to an educational platform aimed at enhancing the learning experience for students passionate about chemistry.",
-      imageUrl: "assets/project/Chemisphere.jpg",
-      liveLink: "https://play.google.com/store/apps/details?id=com.chemisphereApp.app",
-      // githubLink: "https://github.com/Ankit180898?tab=repositories",
-      technologies: ["Flutter", "Firebase", "MVC",],
-      type: ProjectType.web,
-    ),
+
     Project(
-      title: "Home|Website",
+      title: "Ecommerce App",
       description:
           "Home is a social networking app designed to support and connect individuals starting their new life in a foreign country. Our mission is to create a welcoming community where users can share experiences, ask questions, and find helpful resources.",
-      imageUrl: "6.webp",
-      liveLink: "https://home4im.vercel.app/",
-      technologies: ["Flutter", "Firebase", "Vercel"],
+      imageUrl: "assets/project/EcomerceApp.jpg",
+      // liveLink: "https://home4im.vercel.app/",
+      technologies: ["Flutter", "Firebase", "Getx","MVC"],
+      type: ProjectType.app,
+    ),
+
+    Project(
+      title: "Ecommerce Admin Panel",
+      description:
+      "a mobile app that transforms text prompts into AI-generated images.",
+      imageUrl: "assets/project/EcormerceWeb.jpg",
+      // githubLink: "https://github.com/Ankit180898/text_to_image",
+      technologies: ["Flutter", "GetX", "Firebase"],
       type: ProjectType.web,
     ),
-  
+
+    Project(
+      title: "Plum Web",
+      description:
+      "An Expense Tracker App to manage your daily expenses. Build using Supabase and Flutter.",
+      imageUrl: "assets/project/PlumWeb.jpg",
+      // githubLink: "https://github.com/Ankit180898/spendify",
+      technologies: ["Flutter", "Firebase","Function"],
+      type: ProjectType.web,
+    ),
+
+    Project(
+      title: "Job App",
+      description:
+      "An Expense Tracker App to manage your daily expenses. Build using Supabase and Flutter.",
+      imageUrl: "assets/project/JobApp.jpg",
+      // githubLink: "https://github.com/Ankit180898/spendify",
+      technologies: ["Flutter", "MongoDb","Node.js","Socket.io"],
+      type: ProjectType.app,
+    ),
 
     Project(
       title: "Vision AI",
@@ -69,7 +101,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
           "a mobile app that transforms text prompts into AI-generated images.",
       imageUrl: "10.webp",
       githubLink: "https://github.com/Ankit180898/text_to_image",
-      technologies: ["Flutter", "GetX", "Hugging Face"],
+      technologies: ["Flutter", "GetX", "Gemini API"],
       type: ProjectType.app,
     ),
     Project(
@@ -81,63 +113,55 @@ class _ProjectsPageState extends State<ProjectsPage> {
       technologies: ["Flutter", "GetX", "Pdf"],
       type: ProjectType.app,
     ),
-   
-    Project(
-      title: "Spendify",
-      description:
-          "An Expense Tracker App to manage your daily expenses. Build using Supabase and Flutter.",
-      imageUrl: "Spendify.png",
-      githubLink: "https://github.com/Ankit180898/spendify",
-      technologies: ["Flutter", "Supabase"],
-      type: ProjectType.app,
-    ),
-     Project(
-      title: "BlogD",
-      description: "BlogD is a blogging app",
-      imageUrl: "7.png",
-      githubLink: "https://github.com/Ankit180898/blog_app",
-      technologies: ["Flutter", "Supabase"],
-      type: ProjectType.app,
-    ),
-    Project(
-      title: "FlutterStack",
-      description:
-          "Curated resources for Flutter Developers. A community-driven platform.",
-      imageUrl: "FlutterStack.png",
-      githubLink: "https://github.com/Ankit180898/flutter_resource_gallery",
-      liveLink: "https://flutterstack.netlify.app/",
-      technologies: ["Flutter", "Supabase", "Netlify"],
-      type: ProjectType.web,
-    ),
-    Project(
-      title: "Stock Search",
-      description:
-          "A Flutter application that provides stock price and financial information, helping users make informed trading and investment decisions.",
-      imageUrl: "9.webp",
-      githubLink: "https://github.com/Ankit180898/stock_search",
-      technologies: ["Flutter", "GetX"],
-      type: ProjectType.app,
-    ),
+
     Project(
       title: "News App",
       description:
-          "The News App is a Flutter-based application that fetches and displays the latest news articles using NewsAPI. The app follows the MVVM architecture with GetX for state management",
+      "The News App is a Flutter-based application that fetches and displays the latest news articles using NewsAPI. The app follows the MVVM architecture with GetX for state management",
       imageUrl: "8.webp",
       githubLink: "https://github.com/Ankit180898/news_app",
       technologies: ["Flutter", "GetX", "NewsAPI"],
       type: ProjectType.app,
     ),
 
-    Project(
-      title: "Artwork Images",
-      description:
-          "Artwork Images is a platform where you can find images of some of best artists.",
-      imageUrl: "Artworks_Images.png",
-      githubLink: "https://github.com/yourusername/ayehigh",
-      liveLink: "https://artwork-images.netlify.app/",
-      technologies: ["Flutter", "Netlify"],
-      type: ProjectType.web,
-    ),
+    //
+    // Project(
+    //   title: "BlogD",
+    //   description: "BlogD is a blogging app",
+    //   imageUrl: "7.png",
+    //   githubLink: "https://github.com/Ankit180898/blog_app",
+    //   technologies: ["Flutter", "Supabase"],
+    //   type: ProjectType.app,
+    // ),
+    // Project(
+    //   title: "FlutterStack",
+    //   description:
+    //       "Curated resources for Flutter Developers. A community-driven platform.",
+    //   imageUrl: "FlutterStack.png",
+    //   githubLink: "https://github.com/Ankit180898/flutter_resource_gallery",
+    //   liveLink: "https://flutterstack.netlify.app/",
+    //   technologies: ["Flutter", "Supabase", "Netlify"],
+    //   type: ProjectType.web,
+    // ),
+    // Project(
+    //   title: "Stock Search",
+    //   description:
+    //       "A Flutter application that provides stock price and financial information, helping users make informed trading and investment decisions.",
+    //   imageUrl: "9.webp",
+    //   githubLink: "https://github.com/Ankit180898/stock_search",
+    //   technologies: ["Flutter", "GetX"],
+    //   type: ProjectType.app,
+    // ),
+    // Project(
+    //   title: "Artwork Images",
+    //   description:
+    //       "Artwork Images is a platform where you can find images of some of best artists.",
+    //   imageUrl: "Artworks_Images.png",
+    //   githubLink: "https://github.com/yourusername/ayehigh",
+    //   liveLink: "https://artwork-images.netlify.app/",
+    //   technologies: ["Flutter", "Netlify"],
+    //   type: ProjectType.web,
+    // ),
 
     // Add more projects...
   ];
