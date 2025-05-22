@@ -32,7 +32,7 @@ class SocialMediaIconList extends StatelessWidget {
             ),
           ),
           child: const Center(
-            child: SocialMediaIconColumn(),
+            child: MediaAndResumeButton(),
           ),
         );
       },

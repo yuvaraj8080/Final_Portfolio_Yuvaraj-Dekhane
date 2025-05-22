@@ -7,14 +7,16 @@ import 'package:portfolio/views/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-class SocialMediaIconColumn extends StatefulWidget {
-  const SocialMediaIconColumn({super.key});
+import 'glass_button.dart';
+
+class MediaAndResumeButton extends StatefulWidget {
+  const   MediaAndResumeButton({super.key});
 
   @override
-  State<SocialMediaIconColumn> createState() => _SocialMediaIconColumnState();
+  State<MediaAndResumeButton> createState() => _MediaAndResumeButtonState();
 }
 
-class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
+class _MediaAndResumeButtonState extends State<MediaAndResumeButton> {
   int? hoveredIndex;
 
   double getScaledSize(int index) {
@@ -67,39 +69,36 @@ class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
   @override
   Widget build(BuildContext context) {
     return Responsive(
-      desktop: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Spacer(),
-          _buildAnimatedIcon(
-            0,
-            'email2.svg',
-            () => openEmail(email: "ankit.me180898@gmail.com"),
-            context,
-          ),
-          const Spacer(),
-          _buildAnimatedIcon(
-            1,
-            'github.svg',
-            () => launchUrlString("https://github.com/Ankit180898"),
-            context,
-          ),
-          const Spacer(),
-          _buildAnimatedIcon(
-            2,
-            'linkedln.svg',
-            () => launchUrlString("https://www.linkedin.com/in/ankitme1808/"),
-            context,
-          ),
-          const Spacer(),
-          _buildAnimatedIcon(
-            3,
-            'dribble.svg',
-            () => launchUrlString("https://dribbble.com/ankit-me180898"),
-            context,
-          ),
-          const Spacer(),
-        ],
+      desktop:SizedBox(
+        width:350,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Spacer(),
+            _buildAnimatedIcon(
+              0,
+              'email2.svg',
+              () => openEmail(email: "yuvarajdekhane8080@gmail.com"),
+              context,
+            ),
+            const Spacer(),
+            _buildAnimatedIcon(
+              1,
+              'github.svg',
+              () => launchUrlString("https://github.com/yuvaraj8080"),
+              context,
+            ),
+            const Spacer(),
+            _buildAnimatedIcon(
+              2,
+              'linkedln.svg',
+              () => launchUrlString("https://www.linkedin.com/in/yuvaraj-dekhane-473064297/"),
+              context,
+            ),
+            const Spacer(),
+            buildResponsiveCVButton(context),
+          ],
+        ),
       ),
       tablet: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -204,4 +203,28 @@ class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
       debugPrint('openEmail : ${e.toString()}');
     }
   }
+
+  Widget buildResponsiveCVButton(BuildContext context) {
+    return Responsive(
+      desktop: GlassButton(
+        height: displayHeight(context) * 0.05,
+        width: displayHeight(context) * 0.20,
+        text: "Download CV",
+        textSize: 24,
+      ),
+      tablet: GlassButton(
+        height: displayHeight(context) * 0.05,
+        width: displayHeight(context) * 0.20,
+        text: "Download CV",
+        textSize: 20,
+      ),
+      mobile: GlassButton(
+        height: displayHeight(context) * 0.05,
+        width: displayHeight(context) * 0.20,
+        text: "Download CV",
+        textSize: 20,
+      ),
+    );
+  }
+
 }

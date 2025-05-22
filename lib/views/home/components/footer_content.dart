@@ -23,7 +23,7 @@ class FooterContent extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "© 2024 Ankit Kumar. All rights reserved.",
+              "© 2025 Yuvaraj Dekhane. All rights reserved.",
               style: normalText(15),
             ),
             const SizedBox(
@@ -32,7 +32,7 @@ class FooterContent extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   launchUrlString(
-                      "https://github.com/Ankit180898/my_portfolio");
+                      "https://github.com/yuvaraj8080");
                 },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -67,7 +67,7 @@ class FooterContent extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "© 2024 Ankit Kumar. All rights reserved.",
+              "© 2025 Yuvaraj Dekhane. All rights reserved.",
               style: normalText(10),
             ),
             const SizedBox(
@@ -76,7 +76,7 @@ class FooterContent extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   launchUrlString(
-                      "https://github.com/Ankit180898/my_portfolio");
+                      "https://github.com/yuvaraj8080");
                 },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -111,7 +111,7 @@ class FooterContent extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "© 2024 Ankit Kumar. All rights reserved.",
+              "© 2025 Yuvaraj Dekhane. All rights reserved.",
               style: normalText(15),
             ),
             const SizedBox(
@@ -120,7 +120,7 @@ class FooterContent extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   launchUrlString(
-                      "https://github.com/Ankit180898/my_portfolio");
+                      "https://github.com/yuvaraj8080");
                 },
                 child: Row(
                   mainAxisSize: MainAxisSize.min,

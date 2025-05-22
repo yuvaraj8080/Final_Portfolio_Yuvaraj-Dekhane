@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/views/home/components/glass_button.dart';
 import 'package:portfolio/res/constants.dart';
 import 'package:portfolio/views/home/components/footer_content.dart';
 import 'package:portfolio/views/home/components/projects_pages.dart';
 import 'package:portfolio/views/home/components/social_media_column.dart';
-import 'package:portfolio/views/home/components/social_media_icon_list.dart';
-
 import '../../res/size_helpers.dart';
 import '../responsive.dart';
 
@@ -20,7 +17,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: displayHeight(context),
+              // height: displayHeight(context),
               child: Stack(
                 children: [
                   Column(
@@ -28,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       const SizedBox(height: 50),
                       Padding(
-                        padding: const EdgeInsets.all(25),
+                        padding: const EdgeInsets.only(left:30,right:30),
                         child: Row(
                           children: [
                             Expanded(
@@ -39,48 +36,22 @@ class HomeScreen extends StatelessWidget {
                                   buildResponsiveSalutation(),
                                   const SizedBox(height: 20),
                                   buildResponsiveTitle(),
-                                  const SizedBox(height: 10),
-                                  // buildResponsiveDescription(),
-                                  const SizedBox(height: 30),
-                                  buildResponsiveCVButton(context),
-                                  SocialMediaIconColumn(),
+                                  const SizedBox(height:30),
+                                  MediaAndResumeButton(),
                                 ],
                               ),
                             ),
-
-                            const SizedBox(width: 50),
-
+                            const SizedBox(width:80),
                             Expanded(
-                              flex: 3,
+                              flex:4,
                               child: buildBannerSection(context),
                             ),
                           ],
                         ),
                       ),
-                      const SizedBox(height: 20),
-                      // const Responsive(
-                      //   mobile: Center(child: SocialMediaIconColumn()),
-                      //   tablet: Center(child: SocialMediaIconColumn()),
-                      //   desktop: SizedBox.shrink(),
-                      // ),
+                      const SizedBox(height:40),
+                      buildResponsiveDescription(),
                     ],
-                  ),
-                  // const Responsive(
-                  //   desktop: Align(
-                  //     alignment: Alignment.centerLeft,
-                  //     child: Padding(
-                  //       padding: EdgeInsets.only(left: 16.0),
-                  //       child: SocialMediaIconList(),
-                  //     ),
-                  //   ),
-                  //   tablet: SizedBox.shrink(),
-                  //   mobile: SizedBox.shrink(),
-                  // ),
-                  const Positioned(
-                    bottom: 20,
-                    left: 0,
-                    right: 0,
-                    child: ScrollIndicator(),
                   ),
                 ],
               ),
@@ -95,9 +66,9 @@ class HomeScreen extends StatelessWidget {
 
   Widget buildResponsiveSalutation() {
     return Responsive(
-      desktop: buildSalutationText("Hi, I'm Yuvaraj", 30),
-      tablet: buildSalutationText("Hi, I'm Yuvaraj", 30),
-      mobile: buildSalutationText("Hi, I'm Yuvaraj", 30),
+      desktop: buildSalutationText("Hi, I'm Yuvaraj Dekhane", 25),
+      tablet: buildSalutationText("Hi, I'm Yuvaraj Dekhane", 25),
+      mobile: buildSalutationText("Hi, I'm Yuvaraj Dekhane", 25),
     );
   }
 
@@ -114,8 +85,8 @@ class HomeScreen extends StatelessWidget {
   Widget buildResponsiveTitle() {
     return Responsive(
       desktop: buildTitleText("Flutter Developer", 20),
-      tablet: buildTitleText("Flutter Developer", 15),
-      mobile: buildTitleText("Flutter Developer", 15, isPadded: true),
+      tablet: buildTitleText("Flutter Developer", 20),
+      mobile: buildTitleText("Flutter Developer", 20, isPadded: true),
     );
   }
 
@@ -138,54 +109,40 @@ class HomeScreen extends StatelessWidget {
   Widget buildResponsiveDescription() {
     return Responsive(
       desktop: buildDescriptionText(
-          "Crafting innovative Flutter applications, with captivating design \nfor better user experiences."),
+        "Hi, I’m Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
+            "Over the past two years, I’ve built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
+            "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
+            "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
+      ),
       tablet: buildDescriptionText(
-          "Crafting innovative Flutter applications, with captivating design \nfor better user experiences."),
+        "Hi, I’m Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
+            "Over the past two years, I’ve built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
+            "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
+            "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
+      ),
       mobile: buildDescriptionText(
-          "Crafting innovative Flutter applications, with captivating design \nfor better user experiences.",
-          isPadded: true),
+        "Hi, I’m Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
+            "Over the past two years, I’ve built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
+            "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
+            "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
+      ),
     );
   }
 
   Widget buildDescriptionText(String text, {bool isPadded = false}) {
     return Padding(
       padding: isPadded
-          ? const EdgeInsets.symmetric(horizontal: 16.0)
-          : EdgeInsets.zero,
-      child: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text(
-          text,
-          style: normalText(20),
-          maxLines: 2,
-          textAlign: TextAlign.center,
-        ),
+          ? const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)
+          : const EdgeInsets.symmetric(vertical: 8.0),
+      child: Text(
+        text,
+        style: normalText(16),
+        textAlign: TextAlign.left,
+        softWrap: true,
       ),
     );
   }
 
-  Widget buildResponsiveCVButton(BuildContext context) {
-    return Responsive(
-      desktop: GlassButton(
-        height: displayHeight(context) * 0.07,
-        width: displayHeight(context) * 0.25,
-        text: "Download CV",
-        textSize: 24,
-      ),
-      tablet: GlassButton(
-        height: displayHeight(context) * 0.07,
-        width: displayHeight(context) * 0.25,
-        text: "Download CV",
-        textSize: 20,
-      ),
-      mobile: GlassButton(
-        height: displayHeight(context) * 0.07,
-        width: displayHeight(context) * 0.25,
-        text: "Download CV",
-        textSize: 20,
-      ),
-    );
-  }
 }
 
 class ScrollIndicator extends StatefulWidget {

@@ -106,7 +106,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       title: "BlingBill",
       description:
           "BlingBill is a sleek jewelry inventory and billing app that helps jewelers manage products, track sales, and generate invoices effortlessly.",
-      imageUrl: "assets/project/OruPhone.jpg",
+      imageUrl: "assets/project/BlingBill.webp",
       githubLink: "https://github.com/yuvaraj8080/blingbill.git",
       technologies: ["Flutter", "GetX", "Rest API","Postman","MVC"],
       type: ProjectType.app,
@@ -116,7 +116,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       title: "ORU Phone App",
       description:
       "ORU Phone App – Internship Assignment Completed in 48 Hours! I successfully built the ORU Phone App, a Flutter-based e-commerce app, within just 48 hours! This project challenged me to develop a seamless shopping experience with scalable architecture and efficient state management.",
-      imageUrl: "11.webp",
+      imageUrl: "assets/project/OruPhone.jpg",
       // githubLink: "https://github.com/Ankit180898/blingbill",
       technologies: ["Flutter", "GetX", "Pdf","Local Storage"],
       type: ProjectType.app,
@@ -131,46 +131,6 @@ class _ProjectsPageState extends State<ProjectsPage> {
       type: ProjectType.app,
     ),
 
-    //
-    // Project(
-    //   title: "BlogD",
-    //   description: "BlogD is a blogging app",
-    //   imageUrl: "7.png",
-    //   githubLink: "https://github.com/Ankit180898/blog_app",
-    //   technologies: ["Flutter", "Supabase"],
-    //   type: ProjectType.app,
-    // ),
-    // Project(
-    //   title: "FlutterStack",
-    //   description:
-    //       "Curated resources for Flutter Developers. A community-driven platform.",
-    //   imageUrl: "FlutterStack.png",
-    //   githubLink: "https://github.com/Ankit180898/flutter_resource_gallery",
-    //   liveLink: "https://flutterstack.netlify.app/",
-    //   technologies: ["Flutter", "Supabase", "Netlify"],
-    //   type: ProjectType.web,
-    // ),
-    // Project(
-    //   title: "Stock Search",
-    //   description:
-    //       "A Flutter application that provides stock price and financial information, helping users make informed trading and investment decisions.",
-    //   imageUrl: "9.webp",
-    //   githubLink: "https://github.com/Ankit180898/stock_search",
-    //   technologies: ["Flutter", "GetX"],
-    //   type: ProjectType.app,
-    // ),
-    // Project(
-    //   title: "Artwork Images",
-    //   description:
-    //       "Artwork Images is a platform where you can find images of some of best artists.",
-    //   imageUrl: "Artworks_Images.png",
-    //   githubLink: "https://github.com/yourusername/ayehigh",
-    //   liveLink: "https://artwork-images.netlify.app/",
-    //   technologies: ["Flutter", "Netlify"],
-    //   type: ProjectType.web,
-    // ),
-
-    // Add more projects...
   ];
 
   List<Project> get filteredProjects {
