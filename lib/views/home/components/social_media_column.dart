@@ -67,7 +67,7 @@ class _SocialMediaIconColumnState extends State<SocialMediaIconColumn> {
   @override
   Widget build(BuildContext context) {
     return Responsive(
-      desktop: Column(
+      desktop: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Spacer(),

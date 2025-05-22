@@ -9,8 +9,8 @@ class SocialMediaIconList extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        double height = constraints.maxHeight * 0.30;
-        double width = constraints.maxWidth * 0.04;
+        double height = constraints.maxHeight * 0.34;
+        double width = constraints.maxWidth * 0.30;
 
         return AnimatedContainer(
           duration: const Duration(milliseconds: 200),

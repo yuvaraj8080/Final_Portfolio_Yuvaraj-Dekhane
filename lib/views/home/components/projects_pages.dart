@@ -31,18 +31,18 @@ class _ProjectsPageState extends State<ProjectsPage> {
       title: "Plum: Financial Management",
       description: "the Plum Web/App, a powerful platform designed to help the company manage financial health and gain business insights through data-driven decision-making.",
       imageUrl: "assets/project/PlumApp.jpg",
-      technologies: ["Flutter", "Firebase", "Cloud Functions","GetX",],
+      technologies: ["Flutter", "Firebase", "Cloud Functions","GetX","MVC","fl_chart","PDF","Table"],
       type: ProjectType.app,
     ),
 
     Project(
       title: "Chemisphere App",
-      description: "Contributed to an educational platform aimed at enhancing the learning experience for students passionate about chemistry.",
+      description: "During my internship, I contributed to the development of an educational platform designed to enhance the learning experience for students passionate about chemistry. The app aimed to provide a dynamic and engaging environment through features like interactive test series, progress tracking, and real-time content updates",
       imageUrl: "assets/project/ChemisphereApp.jpg",
       liveLink: "https://play.google.com/store/apps/details?id=com.chemisphereApp.app",
       // githubLink: "https://github.com/Ankit180898?tab=repositories",
-      technologies: ["Flutter", "Firebase", "MVC",],
-      type: ProjectType.web,
+      technologies: ["Flutter", "Firebase", "MVC","Hive"],
+      type: ProjectType.app,
     ),
 
     Project(
@@ -51,47 +51,45 @@ class _ProjectsPageState extends State<ProjectsPage> {
           "SheShield is more than just an app – it's a step toward building a safer world to empower women with the tools they need to feel safe, informed, and supported – wherever they are",
       imageUrl: "assets/project/SheShield.jpg",
       // liveLink: "https://play.google.com/store/apps/details?id=com.home4im&hl=en_US",
-      technologies: ["Flutter", "Firebase", "Map","fl_chart"],
+      technologies: ["Flutter", "Firebase", "Google Map","fl_chart","REST API","Calling API"],
       type: ProjectType.app,
     ),
 
     Project(
       title: "Ecommerce App",
       description:
-          "Home is a social networking app designed to support and connect individuals starting their new life in a foreign country. Our mission is to create a welcoming community where users can share experiences, ask questions, and find helpful resources.",
+          "Excited to share the launch of my eCommerce App built with a seamless shopping experience in mind! Here's a glimpse of the incredible features designed to make online shopping simple and secure.",
       imageUrl: "assets/project/EcomerceApp.jpg",
       // liveLink: "https://home4im.vercel.app/",
-      technologies: ["Flutter", "Firebase", "Getx","MVC"],
+      technologies: ["Flutter", "Firebase Database", "Getx","MVC","fl_chart","Firebase Storage","RazorPay","Data Table"],
       type: ProjectType.app,
     ),
 
     Project(
       title: "Ecommerce Admin Panel",
       description:
-      "a mobile app that transforms text prompts into AI-generated images.",
+      "I’m excited to introduce a full-featured Professional E-Commerce App with an integrated Admin Panel, built using Flutter to deliver a seamless experience for both customers and store administrators. including real-time sales analytics, Razorpay payment integration, order tracking, and advanced product, category, and banner management.",
       imageUrl: "assets/project/EcormerceWeb.jpg",
       // githubLink: "https://github.com/Ankit180898/text_to_image",
-      technologies: ["Flutter", "GetX", "Firebase"],
+      technologies: ["Flutter", "Firebase Database", "Getx","MVC","fl_chart","Firebase Storage","RazorPay","Data Table"],
       type: ProjectType.web,
     ),
 
     Project(
       title: "Plum Web",
-      description:
-      "An Expense Tracker App to manage your daily expenses. Build using Supabase and Flutter.",
       imageUrl: "assets/project/PlumWeb.jpg",
       // githubLink: "https://github.com/Ankit180898/spendify",
-      technologies: ["Flutter", "Firebase","Function"],
+      description: "the Plum Web/App, a powerful platform designed to help the company manage financial health and gain business insights through data-driven decision-making.",
+      technologies: ["Flutter", "Firebase", "Cloud Functions","GetX","MVC","fl_chart","PDF","Table"],
       type: ProjectType.web,
     ),
 
     Project(
       title: "Job App",
-      description:
-      "An Expense Tracker App to manage your daily expenses. Build using Supabase and Flutter.",
-      imageUrl: "assets/project/JobApp.jpg",
-      // githubLink: "https://github.com/Ankit180898/spendify",
-      technologies: ["Flutter", "MongoDb","Node.js","Socket.io"],
+      description:"I’m thrilled to share my latest project — a Job Search App built to deliver a seamless user experience and challenge me to master a variety of modern technologies. This hands-on journey has been nothing short of transformative.",
+      imageUrl:"assets/project/JobApp.jpg",
+      githubLink: "https://github.com/yuvaraj8080/flutter_job_and_chatting_app.git",
+      technologies: ["Flutter", "MongoDb","Node.js","Socket.io","Express js","REST API"],
       type: ProjectType.app,
     ),
 
@@ -100,27 +98,36 @@ class _ProjectsPageState extends State<ProjectsPage> {
       description:
           "a mobile app that transforms text prompts into AI-generated images.",
       imageUrl: "10.webp",
-      githubLink: "https://github.com/Ankit180898/text_to_image",
-      technologies: ["Flutter", "GetX", "Gemini API"],
+      githubLink: "https://github.com/yuvaraj8080/gemini_chat_bot.git",
+      technologies: ["Flutter", "GetX", "Gemini API","MVC"],
       type: ProjectType.app,
     ),
     Project(
       title: "BlingBill",
       description:
           "BlingBill is a sleek jewelry inventory and billing app that helps jewelers manage products, track sales, and generate invoices effortlessly.",
-      imageUrl: "11.webp",
-      githubLink: "https://github.com/Ankit180898/blingbill",
-      technologies: ["Flutter", "GetX", "Pdf"],
+      imageUrl: "assets/project/OruPhone.jpg",
+      githubLink: "https://github.com/yuvaraj8080/blingbill.git",
+      technologies: ["Flutter", "GetX", "Rest API","Postman","MVC"],
       type: ProjectType.app,
     ),
 
+    Project(
+      title: "ORU Phone App",
+      description:
+      "ORU Phone App – Internship Assignment Completed in 48 Hours! I successfully built the ORU Phone App, a Flutter-based e-commerce app, within just 48 hours! This project challenged me to develop a seamless shopping experience with scalable architecture and efficient state management.",
+      imageUrl: "11.webp",
+      // githubLink: "https://github.com/Ankit180898/blingbill",
+      technologies: ["Flutter", "GetX", "Pdf","Local Storage"],
+      type: ProjectType.app,
+    ),
     Project(
       title: "News App",
       description:
       "The News App is a Flutter-based application that fetches and displays the latest news articles using NewsAPI. The app follows the MVVM architecture with GetX for state management",
       imageUrl: "8.webp",
-      githubLink: "https://github.com/Ankit180898/news_app",
-      technologies: ["Flutter", "GetX", "NewsAPI"],
+      githubLink: "https://github.com/yuvaraj8080/flutter_news_app.git",
+      technologies: ["Flutter", "GetX", "NewsAPI","MVVM","REST API"],
       type: ProjectType.app,
     ),
 
@@ -281,12 +288,12 @@ class _ProjectsPageState extends State<ProjectsPage> {
                 ),
                 tablet: ProjectGrid(
                   crossAxisCount: 2,
-                  childAspectRatio: 0.9,
+                  childAspectRatio: 0.95,
                   projects: filteredProjects,
                 ),
                 desktop: ProjectGrid(
-                  crossAxisCount: 3,
-                  childAspectRatio: 0.85,
+                  crossAxisCount: 2,
+                  childAspectRatio: 0.95,
                   projects: filteredProjects,
                 ),
               ),
@@ -466,7 +473,7 @@ class _ProjectCardState extends State<ProjectCard> {
                 ),
                 // Content Section
                 Expanded(
-                  flex: 2,
+                  flex:2,
                   child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: Column(
@@ -487,9 +494,9 @@ class _ProjectCardState extends State<ProjectCard> {
                             widget.project.description,
                             style: normalText(isMobile ? 12 : 14).copyWith(
                               color: Colors.white70,
-                              height: 1.4,
+                              // height: 1.4,
                             ),
-                            maxLines: 2,
+                            maxLines: 4,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),

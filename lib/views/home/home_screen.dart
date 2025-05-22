@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/views/home/components/glass_button.dart';
 import 'package:portfolio/res/constants.dart';
-import 'package:portfolio/views/home/components/flip_profile_card.dart';
 import 'package:portfolio/views/home/components/footer_content.dart';
 import 'package:portfolio/views/home/components/projects_pages.dart';
 import 'package:portfolio/views/home/components/social_media_column.dart';
@@ -24,40 +23,59 @@ class HomeScreen extends StatelessWidget {
               height: displayHeight(context),
               child: Stack(
                 children: [
-                  Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 20),
-                        const FlipCardProfile(),
-                        const SizedBox(height: 20),
-                        buildResponsiveSalutation(),
-                        const SizedBox(height: 20),
-                        buildResponsiveTitle(),
-                        const SizedBox(height: 10),
-                        buildResponsiveDescription(),
-                        const SizedBox(height: 20),
-                        const Responsive(
-                          mobile: Center(child: SocialMediaIconColumn()),
-                          tablet: Center(child: SocialMediaIconColumn()),
-                          desktop: SizedBox.shrink(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 50),
+                      Padding(
+                        padding: const EdgeInsets.all(25),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              flex: 2,
+                              child: Column(
+                                crossAxisAlignment:CrossAxisAlignment.center,
+                                children: [
+                                  buildResponsiveSalutation(),
+                                  const SizedBox(height: 20),
+                                  buildResponsiveTitle(),
+                                  const SizedBox(height: 10),
+                                  // buildResponsiveDescription(),
+                                  const SizedBox(height: 30),
+                                  buildResponsiveCVButton(context),
+                                  SocialMediaIconColumn(),
+                                ],
+                              ),
+                            ),
+
+                            const SizedBox(width: 50),
+
+                            Expanded(
+                              flex: 3,
+                              child: buildBannerSection(context),
+                            ),
+                          ],
                         ),
-                        const SizedBox(height: 30),
-                        buildResponsiveCVButton(context),
-                      ],
-                    ),
-                  ),
-                  const Responsive(
-                    desktop: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Padding(
-                        padding: EdgeInsets.only(left: 16.0),
-                        child: SocialMediaIconList(),
                       ),
-                    ),
-                    tablet: SizedBox.shrink(),
-                    mobile: SizedBox.shrink(),
+                      const SizedBox(height: 20),
+                      // const Responsive(
+                      //   mobile: Center(child: SocialMediaIconColumn()),
+                      //   tablet: Center(child: SocialMediaIconColumn()),
+                      //   desktop: SizedBox.shrink(),
+                      // ),
+                    ],
                   ),
+                  // const Responsive(
+                  //   desktop: Align(
+                  //     alignment: Alignment.centerLeft,
+                  //     child: Padding(
+                  //       padding: EdgeInsets.only(left: 16.0),
+                  //       child: SocialMediaIconList(),
+                  //     ),
+                  //   ),
+                  //   tablet: SizedBox.shrink(),
+                  //   mobile: SizedBox.shrink(),
+                  // ),
                   const Positioned(
                     bottom: 20,
                     left: 0,
@@ -95,9 +113,9 @@ class HomeScreen extends StatelessWidget {
 
   Widget buildResponsiveTitle() {
     return Responsive(
-      desktop: buildTitleText("Flutter Developer", 72),
-      tablet: buildTitleText("Flutter Developer", 64),
-      mobile: buildTitleText("Flutter Developer", 58, isPadded: true),
+      desktop: buildTitleText("Flutter Developer", 20),
+      tablet: buildTitleText("Flutter Developer", 15),
+      mobile: buildTitleText("Flutter Developer", 15, isPadded: true),
     );
   }
 
@@ -227,4 +245,42 @@ class _ScrollIndicatorState extends State<ScrollIndicator>
       ],
     );
   }
+}
+
+Widget buildBannerSection(BuildContext context) {
+  return Container(
+    height: 200,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+    ),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Stack(
+        children: [
+          // Placeholder for your banner image
+          SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+            child: Image.asset(
+              'assets/project/Banner.jpg', // Replace with your banner image
+              fit: BoxFit.cover,
+            ),
+          ),
+          // Overlay gradient
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.transparent,
+                  Colors.black.withOpacity(0.3),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
