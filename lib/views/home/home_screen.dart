@@ -3,8 +3,8 @@ import 'package:portfolio/res/constants.dart';
 import 'package:portfolio/views/home/components/footer_content.dart';
 import 'package:portfolio/views/home/components/projects_pages.dart';
 import 'package:portfolio/views/home/components/social_media_column.dart';
-import '../../res/size_helpers.dart';
 import '../responsive.dart';
+import 'components/banner_section.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,42 +17,9 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              // height: displayHeight(context),
               child: Stack(
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      const SizedBox(height: 50),
-                      Padding(
-                        padding: const EdgeInsets.only(left:30,right:30),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              flex: 2,
-                              child: Column(
-                                crossAxisAlignment:CrossAxisAlignment.center,
-                                children: [
-                                  buildResponsiveSalutation(),
-                                  const SizedBox(height: 20),
-                                  buildResponsiveTitle(),
-                                  const SizedBox(height:30),
-                                  MediaAndResumeButton(),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width:80),
-                            Expanded(
-                              flex:4,
-                              child: buildBannerSection(context),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height:40),
-                      buildResponsiveDescription(),
-                    ],
-                  ),
+                  buildResponsiveMainContent(context),
                 ],
               ),
             ),
@@ -64,13 +31,101 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildResponsiveSalutation() {
+  Widget buildResponsiveMainContent(BuildContext context) {
     return Responsive(
-      desktop: buildSalutationText("Hi, I'm Yuvaraj Dekhane", 25),
-      tablet: buildSalutationText("Hi, I'm Yuvaraj Dekhane", 25),
-      mobile: buildSalutationText("Hi, I'm Yuvaraj Dekhane", 25),
+      desktop: buildDesktopLayout(context),
+      tablet: buildMobileLayout(context),
+      mobile: buildMobileLayout(context),
     );
   }
+
+
+  // Desktop Layout - Row layout with banner on right
+  Widget buildDesktopLayout(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        const SizedBox(height: 50),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    buildSalutationText("Hi, I'm Yuvaraj Dekhane", 25),
+                    const SizedBox(height: 20),
+                    buildTitleText("Flutter Developer", 20),
+                    const SizedBox(height: 30),
+                    MediaAndResumeButton(),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 80),
+              Expanded(
+                flex: 4,
+                child: buildBannerSection(context),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 40),
+        buildDescriptionText(
+          "Hi, I'm Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
+              "Over the past two years, I've built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
+              "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
+              "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
+        ),
+      ],
+    );
+  }
+
+  // Mobile Layout - Column layout (stacked vertically)
+  Widget buildMobileLayout(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        const SizedBox(height: 30),
+        // Banner Section at top for mobile
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: buildBannerSection(context),
+        ),
+        const SizedBox(height: 30),
+        // Content below banner
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildSalutationText("Hi, I'm Yuvaraj Dekhane", 20),
+              const SizedBox(height: 15),
+              buildTitleText("Flutter Developer", 16),
+              const SizedBox(height: 25),
+              MediaAndResumeButton(),
+            ],
+          ),
+        ),
+        const SizedBox(height: 30),
+        // Description
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: buildDescriptionText(
+            "Hi, I'm Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
+                "Over the past two years, I've built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
+                "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
+                "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
+            isPadded: true,
+          ),
+        ),
+        const SizedBox(height: 20),
+      ],
+    );
+  }
+
 
   Widget buildSalutationText(String text, double fontSize) {
     return FittedBox(
@@ -106,29 +161,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget buildResponsiveDescription() {
-    return Responsive(
-      desktop: buildDescriptionText(
-        "Hi, I’m Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
-            "Over the past two years, I’ve built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
-            "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
-            "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
-      ),
-      tablet: buildDescriptionText(
-        "Hi, I’m Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
-            "Over the past two years, I’ve built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
-            "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
-            "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
-      ),
-      mobile: buildDescriptionText(
-        "Hi, I’m Yuvaraj Dekhane, a third-year Computer Science student at RGIT, Andheri (Mumbai University) and a passionate Flutter developer.\n"
-            "Over the past two years, I’ve built 30+ cross-platform mobile apps using GetX, Provider, Bloc, and backend tools like Firebase, Supabase, and MongoDB.\n"
-            "My work spans across social, business, safety, educational, and ML-powered domains, with 3 apps successfully published on the Google Play Store.\n"
-            "I focus on creating scalable, intuitive, and impactful mobile solutions that solve real-world problems.",
-      ),
-    );
-  }
-
   Widget buildDescriptionText(String text, {bool isPadded = false}) {
     return Padding(
       padding: isPadded
@@ -143,101 +175,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-}
-
-class ScrollIndicator extends StatefulWidget {
-  const ScrollIndicator({super.key});
-
-  @override
-  State<ScrollIndicator> createState() => _ScrollIndicatorState();
-}
-
-class _ScrollIndicatorState extends State<ScrollIndicator>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<Offset> _slideAnimation;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      duration: const Duration(seconds: 1),
-      vsync: this,
-    )..repeat(reverse: true);
-
-    _slideAnimation = Tween<Offset>(
-      begin: const Offset(0, -0.2),
-      end: const Offset(0, 0.2),
-    ).animate(CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeInOut,
-    ));
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SlideTransition(
-          position: _slideAnimation,
-          child: const Icon(
-            Icons.keyboard_arrow_down,
-            color: buttonColor,
-            size: 32,
-          ),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          'Scroll down to view projects',
-          style: normalText(14).copyWith(
-            letterSpacing: 1.2,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-Widget buildBannerSection(BuildContext context) {
-  return Container(
-    height: 200,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(20),
-    ),
-    child: ClipRRect(
-      borderRadius: BorderRadius.circular(20),
-      child: Stack(
-        children: [
-          // Placeholder for your banner image
-          SizedBox(
-            width: double.infinity,
-            height: double.infinity,
-            child: Image.asset(
-              'assets/project/Banner.jpg', // Replace with your banner image
-              fit: BoxFit.cover,
-            ),
-          ),
-          // Overlay gradient
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.transparent,
-                  Colors.black.withOpacity(0.3),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
 }
