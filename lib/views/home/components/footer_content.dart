@@ -8,7 +8,6 @@ import 'social_icon.dart';
 
 class FooterContent extends StatelessWidget {
   const FooterContent({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Responsive(
@@ -139,7 +138,7 @@ class FooterContent extends StatelessWidget {
                         width: displayWidth(context) * 0.015),
                   ],
                 )),
-            const SizedBox(
+            const SizedBox( 
               height: 5,
             ),
           ],
