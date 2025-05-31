@@ -39,6 +39,8 @@ dependencies:
   glassmorphism: 
   google_fonts: 
   url_launcher: ^6.2.5
+  firebase_core:
+
 
 
 dev_dependencies:
