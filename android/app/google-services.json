@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "618234153079",
+    "project_id": "yuvaraj-dekhane",
+    "storage_bucket": "yuvaraj-dekhane.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618234153079:android:f5b6c29f301c6386db5e72",
+        "android_client_info": {
+          "package_name": "com.example.portfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQjjCyglop7wFxWIqACoB7mLf0bAUGsZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
