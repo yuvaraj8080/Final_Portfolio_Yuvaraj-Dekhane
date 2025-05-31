@@ -97,7 +97,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       title: "Vision AI",
       description:
           "a mobile app that transforms text prompts into AI-generated images.",
-      imageUrl: "10.webp",
+      imageUrl: "assets/project/visionApp.webp",
       githubLink: "https://github.com/yuvaraj8080/gemini_chat_bot.git",
       technologies: ["Flutter", "GetX", "Gemini API","MVC"],
       type: ProjectType.app,
@@ -125,7 +125,7 @@ class _ProjectsPageState extends State<ProjectsPage> {
       title: "News App",
       description:
       "The News App is a Flutter-based application that fetches and displays the latest news articles using NewsAPI. The app follows the MVVM architecture with GetX for state management",
-      imageUrl: "8.webp",
+      imageUrl: "assets/project/newsApp.webp",
       githubLink: "https://github.com/yuvaraj8080/flutter_news_app.git",
       technologies: ["Flutter", "GetX", "NewsAPI","MVVM","REST API"],
       type: ProjectType.app,
